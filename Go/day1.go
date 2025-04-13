@@ -10,8 +10,8 @@ import (
 	"strings"
 )
 
-const samplePath = "../data/Sample_Day1.txt"
-const inputPath = "../data/Day1.txt"
+const samplePath = "../Data/Sample_Day1.txt"
+const inputPath = "../Data/Day1.txt"
 
 func Day1() (int, int, int, int) {
 
