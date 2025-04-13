@@ -61,6 +61,7 @@ func CreateLists(f *os.File) ([]int, []int) {
 
 }
 
+// Calculate total distances between list
 func part1Calc(l1, l2 []int) int {
 
 	slices.Sort(l1)
@@ -75,6 +76,7 @@ func part1Calc(l1, l2 []int) int {
 
 }
 
+// Calculate similarity score
 func part2Calc(l1, l2 []int) int {
 
 	counts := make(map[int]int)

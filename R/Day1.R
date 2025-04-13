@@ -15,7 +15,8 @@ testData <- ParseData("../Data/Sample_Day1.txt")
 
 data <- ParseData("../Data/Day1.txt")
 
-CalcTotalDist <- function(data) {
+# Calculate total distances between lists
+Part1Calct <- function(data) {
   
   orders <- data |> 
     mutate_all(sort) |> 
@@ -25,13 +26,8 @@ CalcTotalDist <- function(data) {
   
 }
 
-s1 <- CalcTotalDist(testData)
-glue("Part 1 Sample Answer: {s1}") |>  print()
-
-a1 <- CalcTotalDist(data)
-glue("Part 1 Answer: {a1}") |>  print()
-
-CalcSimilarity <- function(data) {
+# Calculate similarity score
+Part2Calc <- function(data) {
   
   sims <- map_dbl(data$col1, \(x) sum(data$col2 == x))
   
@@ -39,8 +35,10 @@ CalcSimilarity <- function(data) {
   
 }
 
-s2 <- CalcSimilarity(testData)
-glue("Part 2 Sample Answer: {s2}") |>  print()
+s1 <- Part1Calct(testData)
+p1 <- Part1Calct(data)
 
-a2 <- CalcSimilarity(data)
-glue("Part 2 Answer: {a2}") |>  print()
+
+s2 <- Part2Calc(testData)
+p2 <- Part2Calc(data)
+
