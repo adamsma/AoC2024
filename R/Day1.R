@@ -1,7 +1,6 @@
 library(readr)
 library(dplyr)
 library(purrr)
-library(glue)
 
 ParseData <- function(file){
   file |> 
