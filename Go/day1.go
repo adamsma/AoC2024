@@ -10,10 +10,10 @@ import (
 	"strings"
 )
 
-const samplePath = "../Data/Sample_Day1.txt"
-const inputPath = "../Data/Day1.txt"
-
 func Day1() (int, int, int, int) {
+  
+  const samplePath = "../Data/Sample_Day1.txt"
+  const inputPath = "../Data/Day1.txt"
 
 	sFile, err := os.Open(samplePath)
 	if err != nil {
