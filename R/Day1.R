@@ -15,7 +15,7 @@ testData <- ParseData("../Data/Sample_Day1.txt")
 data <- ParseData("../Data/Day1.txt")
 
 # Calculate total distances between lists
-Part1Calct <- function(data) {
+Part1Calc <- function(data) {
   
   orders <- data |> 
     mutate_all(sort) |> 
@@ -34,8 +34,8 @@ Part2Calc <- function(data) {
   
 }
 
-s1 <- Part1Calct(testData)
-p1 <- Part1Calct(data)
+s1 <- Part1Calc(testData)
+p1 <- Part1Calc(data)
 
 
 s2 <- Part2Calc(testData)
