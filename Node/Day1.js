@@ -1,5 +1,3 @@
-"use strict"
-
 const fs = require("node:fs")
 
 const samplePath = "../data/Sample_Day1.txt"
