@@ -17,7 +17,7 @@ func Day1() (int, int, int, int) {
 
 	sFile, err := os.Open(samplePath)
 	if err != nil {
-		log.Fatalf("could not open %s: %s", inputPath, err)
+		log.Fatalf("could not open %s: %s", samplePath, err)
 	}
 	defer sFile.Close()
 
