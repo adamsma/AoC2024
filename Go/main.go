@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const currentDay = 2
+const currentDay = 3
 
 func main() {
 
@@ -35,6 +35,10 @@ func getSolutions() []solution {
 		{
 			name:     "Day2",
 			callback: Day2,
+		},
+		{
+			name:     "Day3",
+			callback: Day3,
 		},
 	}
 
