@@ -1,4 +1,4 @@
-const CURRENT_DAY = 2
+const CURRENT_DAY = 3
 var { s1, s2, p1, p2 } = require(`./Day${CURRENT_DAY}.js`)
 
 const PrintSolutions = (sample1, part1, sample2, part2) => {
