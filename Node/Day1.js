@@ -9,7 +9,7 @@ const CreateLists = (data) => {
 
   const rows = data.trim().split("\r\n")
   rows.forEach((row) => {
-    var [x, y] = row.split("   ").slice(0, 2)
+    let [x, y] = row.split("   ").slice(0, 2)
     l1.push(parseInt(x))
     l2.push(parseInt(y))
   })
@@ -19,7 +19,7 @@ const CreateLists = (data) => {
 
 // Calculate total distances between list
 const Part1Calc = (l1, l2) => {
-  var dist = 0
+  let dist = 0
 
   l1.forEach((x, i) => {
     dist += Math.abs(x - l2[i])
@@ -31,7 +31,7 @@ const Part1Calc = (l1, l2) => {
 // Calculate similarity score
 const Part2Calc = (l1, l2) => {
   const counts = new Map()
-  var sim = 0
+  let sim = 0
 
   l1.forEach((x) => counts.set(x, 0))
   l2.forEach((x) => {
@@ -46,16 +46,16 @@ const Part2Calc = (l1, l2) => {
 const sData = fs.readFileSync(samplePath, "utf8")
 const data = fs.readFileSync(inputPath, "utf8")
 
-var [l1, l2] = CreateLists(sData)
-l1.sort()
-l2.sort()
-var s1 = Part1Calc(l1, l2)
-var s2 = Part2Calc(l1, l2)
+let [sl1, sl2] = CreateLists(sData)
+sl1.sort()
+sl2.sort()
+let s1 = Part1Calc(sl1, sl2)
+let s2 = Part2Calc(sl1, sl2)
 
-var [l1, l2] = CreateLists(data)
+let [l1, l2] = CreateLists(data)
 l1.sort()
 l2.sort()
-var p1 = Part1Calc(l1, l2)
-var p2 = Part2Calc(l1, l2)
+let p1 = Part1Calc(l1, l2)
+let p2 = Part2Calc(l1, l2)
 
 module.exports = { s1, s2, p1, p2 }
